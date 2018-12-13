@@ -6,52 +6,48 @@
   <title>Neverwinter</title>
 </head>
 <style>
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0px;
-  overflow: hidden;
+.topnav {
+  position: relative;
   background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  overflow: hidden;
 }
 
-li {
+
+.topnav a {
   float: left;
-  border-right: 1px solid #bbb;
-}
-
-li a {
-  display: block;
-  color: white;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-li a:hover {
-  background-color: #111;
+  font-size: 17px;
 }
 
-li:last-child {
-  border-right: none;
-}
-.active {
-  background-color: #4CAF50;
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+
+.topnav a.active {
+  background-color: orange;
+  color: white;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+
+.topnav-right {
+  float: right;
+}
+
   body {
     font-size: 100%;
     font-family: helvetica;
@@ -67,12 +63,7 @@ li:last-child {
     color: white;
   }
   @media (min-width: 800px) {
-    .row {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
     }
-  }
   .description {
     margin-left: auto;
     margin-right: auto;
@@ -81,40 +72,38 @@ li:last-child {
     padding:4%;
     font-size: 150%;
   }
+  .topnav a, .topnav-right {
+ float: none;
+ display: block;
+}
 
   @media (min-width: 600px) {
     .description {
       box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.15);
     }
+
+
+ .topnav-centered a {
+   position: relative;
+   top: 0;
+   left: 0;
+   transform: none;
+ }
   }
 </style>
 
 <body>
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.game.html">About the game</a></li>
-  <li><a href="my.build.html">My build</a></li>
-  <li><a href="other.builds.html">Other builds</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-  <div class="description">
-    <p>Hi, my name is Rob and this website is about my favorite videogame, <b>Neverwinter.</b></p>
-  </div>
-  <div class="row">
-    <div class="Column">
-      <img src="https://cdn.uc.assets.prezly.com/37ef2d4c-a17d-4975-be92-c014c21edbcb/-/preview/500x500/-/quality/best/" style="width:100%" a href="My.build.html">
+  <div class="topnav">
+    <div class="topnav-centered">
+      <a href="#home" class="active">Home</a>
     </div>
-<div class="Column">
-      <img src="https://d1u5p3l4wpay3k.cloudfront.net/neverwinter_gamepedia/thumb/b/b7/Fighter_greatweapon.png/280px-Fighter_greatweapon.png?version=3f334a68a0df01e28d5cf6ed20a7a106" style="width:100%" a href="AboutGame.html">
+    <a href="about.game.html">About the game</a>
+    <div class="topnav-right">
+      <a href="my.build.html">My build</a>
+      <a href="other.builds.html">Other builds</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </div>
-  <div class="row">
-    <div class="Column">
-      <img src="https://d1u5p3l4wpay3k.cloudfront.net/neverwinter_gamepedia/thumb/4/41/Class_Icon_Player_Scourge_Selected.png/280px-Class_Icon_Player_Scourge_Selected.png?version=201d09d4efd9c51c03e79c3005006c7d" style="width:100%" a href="Other.builds.html">
-    </div>
-    <div class="Column">
-      <img src="http://pngimg.com/uploads/gmail_logo/gmail_logo_PNG12.png" style="width:100%" a href="Contact.html">
-    </div>
+
   </div>
 </body>
 </html>

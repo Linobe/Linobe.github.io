@@ -6,10 +6,24 @@
   <title>Neverwinter</title>
 </head>
 <style>
-  .column {
-    box-sizing: border-box;
-  }
-
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    color: white;
+}
+.nav li{
+    display:inline;
+      color: white;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    color: white;
+}
   body {
     font color=r;
     font-size: 100%;
@@ -26,29 +40,9 @@
     color: white;
   }
 
-  .row {}
 
-  .column {
-    width: 50%;
-    float: left;
-    padding: 10px;
-  }
 
-  @media (min-width: 800px) {
-    .row {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  .row:after {
-    display: table;
-    clear: both;
-  }
-
-  .row img {}
-
+@media (min-width: 800px) {
   .description {
     margin-left: auto;
     margin-right: auto;
@@ -57,6 +51,7 @@
     padding: 1.5%;
     font-size: 150%;
   }
+}
 
   @media (min-width: 600px) {
     .description {
@@ -66,9 +61,12 @@
 </style>
 
 <body>
-  <div class="Title">
-    <h1>Neverwinter</h1>
-  </div>
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.game.html">About the game</a></li>
+    <li><a href="other.builds.html">Other builds</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
   <div class="description">
     <p></p>
   </div>
